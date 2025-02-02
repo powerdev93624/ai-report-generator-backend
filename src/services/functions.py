@@ -127,14 +127,14 @@ def replace_recommendation(transcript, scores):
             improve_paragraph = paragraphs[globals()[f"{performance}_improvement_paragraph_id"]]
             p = improve_paragraph._element
             p.getparent().remove(p)
-            time.sleep(1)
+            time.sleep(10)
         else:
             improve_paragraph = paragraphs[globals()[f"{performance}_improvement_paragraph_id"]]
             replace_paragraph_text(improve_paragraph, performance, globals()[f"get_{performance}_improve"](transcript))
             strengthen_paragraph = paragraphs[globals()[f"{performance}_strengthen_paragraph_id"]]
             p = strengthen_paragraph._element
             p.getparent().remove(p)
-            time.sleep(1)
+            time.sleep(10)
 def replace_next_steps(next_steps):
     next_steps_paragraph = paragraphs[next_steps_paragraph_id]
     replace_paragraph_text(next_steps_paragraph, "Next steps", next_steps)

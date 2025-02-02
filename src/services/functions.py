@@ -118,7 +118,7 @@ def replace_sustain(sustain):
     sustain_paragraph = paragraphs[sustain_paragraph_id]
     replace_paragraph_text(sustain_paragraph, "sustain", sustain)
     
-def replace_recommendation(transcript):
+def replace_recommendation(transcript, scores):
     for performance in performance_list:
         print(performance)
         if scores.loc[scores['id'] == performance, 'score'].values[0] >= 7:

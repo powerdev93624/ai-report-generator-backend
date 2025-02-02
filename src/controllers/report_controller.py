@@ -63,7 +63,7 @@ def generate():
         print(18)
         replace_sustain(get_sustain(transcript))
         print(19)
-        replace_recommendation(transcript)
+        replace_recommendation(transcript, scores)
         print(20)
         replace_next_steps(get_next_steps(transcript))
         print(21)

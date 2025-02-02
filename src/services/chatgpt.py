@@ -60,7 +60,7 @@ def get_strategic_partner(transcript):
     
     Please provide 50-100 word summary of the executive's performance in this domain. 
     
-    Domain Definition: STC's STAR Leaders demonstrate progressive long-term thinking and a growth mindset, build strong partnerships to foster collaboration, and simplify complexity to align priorities and maximize stakeholder value. This domain score is an average of the three competency scores - scores for each competency below are on a scale of 1 to 10 (10 represents world-class performance).
+    Domain Definition: STC's STAR Leaders demonstrate progressive long-term thinking and a growth mindset, build strong partnerships to foster collaboration, and simplify complexity to align priorities and maximize stakeholder value.
     
     Sample Answer:
     Ahmed demonstrates a strong technical mindset and an ability to build effective working relationships with colleagues and vendors. He is collaborative and open to learning, which supports his ability to connect with others. However, he could enhance his ability to drive strategic initiatives and simplify complex problems independently.
@@ -200,7 +200,7 @@ def get_agile_executor(transcript):
     
     Please provide 50-100 word summary of the executive's performance in this domain.
     
-    Domain Definition: STC's STAR Leaders deliver results by fostering accountability and tracking outcomes, adapt to change by navigating complexity with agility, and pioneer digital transformation by championing emerging technologies and innovative solutions. This domain score is an average of the three competency scores – scores for each competency below are on a scale of 1 to 10 (10 represents world-class performance).
+    Domain Definition: STC's STAR Leaders deliver results by fostering accountability and tracking outcomes, adapt to change by navigating complexity with agility, and pioneer digital transformation by championing emerging technologies and innovative solutions.
     
     Sample Answer:
     Ahmed excels as an Agile Executor, showcasing a disciplined focus on delivering results, adaptability in ambiguous situations, and a proactive approach to leveraging emerging technologies. His ability to manage high-pressure projects and lead teams through change is commendable, though there is room to enhance strategic alignment and broader organizational integration of digital initiatives. Strengthening these areas will amplify Ahmed’s already impressive contributions to driving results and innovation.
@@ -268,7 +268,7 @@ def get_resilient_steward(transcript):
     
     Please provide 50-100 word summary of the executive's performance in this domain..
     
-    Domain Definition: STC's STAR Leaders serve stakeholders with humility by embracing new  perspectives, inspire others with optimism and integrity, and sustaining long-term success by embodying grit and resilience. This domain score is an average of the three competency scores – scores for each competency below are on a scale of 1 to 10 (10 represents world-class performance).
+    Domain Definition: STC's STAR Leaders serve stakeholders with humility by embracing new  perspectives, inspire others with optimism and integrity, and sustaining long-term success by embodying grit and resilience.
     
     Sample Answer:
     Ahmed exemplifies resilience and humility, fostering trust and collaboration across teams while remaining steadfast in the face of challenges. His ability to incorporate diverse perspectives and maintain composure under pressure has earned widespread respect. While Ahmed’s leadership is defined by integrity and perseverance, further developing his ability to inspire and instill resilience in others will enhance his impact, enabling him to lead with greater influence and drive long-term success at STC.

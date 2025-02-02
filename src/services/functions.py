@@ -11,7 +11,7 @@ original_doc_path = "src/files/sample/sample.docx"
 output_doc_path = "src/files/result/result.docx"
 
 doc = Document(original_doc_path)
-scores = pd.read_csv("src/files/score/score.csv")
+
 paragraphs = doc.paragraphs
 
 def replace_paragraph_text(paragraph, old_text, new_text):
@@ -33,7 +33,7 @@ def replace_background(background):
     background_paragraph = paragraphs[background_paragraph_id]
     replace_paragraph_text(background_paragraph, "background", background)
     
-def fill_score():
+def fill_score(scores):
     current_dir = os.getcwd()
     score_doc_path = os.path.join(current_dir, output_doc_path)
     # score_doc_path = "src/files/result/result.docx"

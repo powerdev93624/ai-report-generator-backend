@@ -18,6 +18,7 @@ report = Blueprint("report", __name__)
 @report.route('/generate', methods = ["POST"])
 def generate():
     pythoncom.CoInitializeEx(0)
+    scores = pd.read_csv("src/files/score/score.csv")
     try: 
         data = request.json
         print(data)
@@ -66,7 +67,7 @@ def generate():
         print(20)
         replace_next_steps(get_next_steps(transcript))
         print(21)
-        fill_score()
+        fill_score(scores)
         return Response(
             response=json.dumps({
                 'status': True,

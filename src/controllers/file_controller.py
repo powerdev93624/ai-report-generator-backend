@@ -75,13 +75,13 @@ def delete_files():
     current_dir = os.getcwd()
     transcript_path = os.path.join(current_dir, 'src/files/transcript/transcript.txt')
     score_path = os.path.join(current_dir, 'src/files/score/score.csv')
-    result_path = os.path.join(current_dir, 'src/files/report/report.docx')
+    report_path = os.path.join(current_dir, 'src/files/report/report.docx')
     if os.path.exists(transcript_path):
         os.remove(transcript_path)
     if os.path.exists(score_path):
         os.remove(score_path)
-    if os.path.exists(result_path):
-        os.remove(result_path)
+    if os.path.exists(report_path):
+        os.remove(report_path)
     return Response(
         response=json.dumps({
                 'status': True,

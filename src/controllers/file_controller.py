@@ -68,9 +68,9 @@ def download_file():
 @file.route("/", methods=["GET"])
 def delete_files():
     current_dir = os.getcwd()
-    transcript_path = 'files/transcript/transcript.txt'
-    score_path = 'files/score/score.csv'
-    result_path = 'files/result/result.docx'
+    transcript_path = os.path.join(current_dir, 'src/files/transcript/transcript.txt')
+    score_path = os.path.join(current_dir, 'src/files/score/score.csv')
+    result_path = os.path.join(current_dir, 'src/files/result/result.docx')
     if os.path.exists(transcript_path):
         os.remove(transcript_path)
     if os.path.exists(score_path):

@@ -114,14 +114,14 @@ def replace_sustain(paragraphs, sustain):
     sustain_paragraph = paragraphs[sustain_paragraph_id]
     replace_paragraph_text(sustain_paragraph, "sustain", sustain)
     
-def replace_recommendation(paragraphs, transcript, scores):
+def replace_recommendation(paragraphs,full_name, transcript, scores):
     for performance in performance_list:
         print(performance)
         if scores.loc[scores['id'] == performance, 'score'].values[0] >= 7:
             print(0)
             strengthen_paragraph = paragraphs[globals()[f"{performance}_strengthen_paragraph_id"]]
             print(1)
-            replace_paragraph_text(strengthen_paragraph, performance, globals()[f"get_{performance}_strengthen"](transcript))
+            replace_paragraph_text(strengthen_paragraph, performance, globals()[f"get_{performance}_strengthen"](full_name, transcript))
             print(2)
             improve_paragraph = paragraphs[globals()[f"{performance}_improvement_paragraph_id"]]
             print(3)
@@ -134,7 +134,7 @@ def replace_recommendation(paragraphs, transcript, scores):
             print(0)
             improve_paragraph = paragraphs[globals()[f"{performance}_improvement_paragraph_id"]]
             print(1)
-            replace_paragraph_text(improve_paragraph, performance, globals()[f"get_{performance}_improve"](transcript))
+            replace_paragraph_text(improve_paragraph, performance, globals()[f"get_{performance}_improve"](full_name, transcript))
             print(2)
             strengthen_paragraph = paragraphs[globals()[f"{performance}_strengthen_paragraph_id"]]
             print(3)

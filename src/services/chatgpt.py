@@ -32,7 +32,7 @@ def get_response(prompt):
 
     return completion.choices[0].message.content
 
-def get_background(transcript):
+def get_background(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -40,7 +40,8 @@ def get_background(transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200 word summary of the individual's background, education, and career trajectory, tailored to the executive being assessed. 
+    Please provide 2 paragraphs with 150-200 word summary of the individual's background, education, and career trajectory, tailored to the executive being assessed. 
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}. 
     
     Sample Answer:
     Ahmed Khaled Al Harbi began his career with a formative experience studying in the United States, which significantly shaped his independence and self-reliance. During his time abroad, he developed resilience and adaptability, navigating cultural differences and building a foundation of confidence. Upon returning to the UAE, Ahmed pursued a degree in Electronics and Computers at the Higher Colleges of Technology, excelling in hands-on technical projects such as building and configuring computer networks.
@@ -50,7 +51,7 @@ def get_background(transcript):
     """
     return get_response(prompt)
 
-def get_strategic_partner(transcript):
+def get_strategic_partner(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -59,6 +60,7 @@ def get_strategic_partner(transcript):
     =======================================================
     
     Please provide 50-100 word summary of the executive's performance in this domain. 
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}. 
     
     Domain Definition: STC's STAR Leaders demonstrate progressive long-term thinking and a growth mindset, build strong partnerships to foster collaboration, and simplify complexity to align priorities and maximize stakeholder value.
     
@@ -68,7 +70,7 @@ def get_strategic_partner(transcript):
     """
     return get_response(prompt)
 
-def get_innovate(transcript):
+def get_innovate(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -77,6 +79,7 @@ def get_innovate(transcript):
     =======================================================
     
     Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency. 
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Demonstrates a growth mindset and progressive long-term thinking by challenging the status quo to identify and promote innovative strategic initiatives.
     
@@ -86,7 +89,7 @@ def get_innovate(transcript):
     """
     return get_response(prompt)
 
-def get_connect(transcript):
+def get_connect(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -95,6 +98,7 @@ def get_connect(transcript):
     =======================================================
     
     Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Develops and maintains strong relationships with strategic stakeholders (internal and external partners / government / customers) by actively enabling collaboration across the enterprise.
     
@@ -104,7 +108,7 @@ def get_connect(transcript):
     """
     return get_response(prompt)
 
-def get_simplify(transcript):
+def get_simplify(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -113,6 +117,7 @@ def get_simplify(transcript):
     =======================================================
     
     Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Aligns the enterprise on highest-priority efforts that maximize stakeholder value by aggressively reducing complexity and bureaucracy.
     
@@ -122,7 +127,7 @@ def get_simplify(transcript):
     """
     return get_response(prompt)
 
-def get_talent_enabler(transcript):
+def get_talent_enabler(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -131,6 +136,7 @@ def get_talent_enabler(transcript):
     =======================================================
     
     Please provide 50-100 word summary of the executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: STC's STAR Leaders actively coach, develop, and engage talent, empower high-performing teams by cultivating trust and ownership, and elevate performance by inspiring excellence and enabling individuals and teams to achieve exceptional results.
     
@@ -139,7 +145,7 @@ def get_talent_enabler(transcript):
     """
     return get_response(prompt)
 
-def get_coach(transcript):
+def get_coach(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -148,6 +154,7 @@ def get_coach(transcript):
     =======================================================
     
     Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Actively coaches and develops talent by fostering adaptability and preparing them to lead effectively in an ever-evolving environment.
     
@@ -156,7 +163,7 @@ def get_coach(transcript):
     """
     return get_response(prompt)
 
-def get_empower(transcript):
+def get_empower(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -165,6 +172,7 @@ def get_empower(transcript):
     =======================================================
     
     Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Builds high-performing teams by cultivating trust, delegating authority, and creating an environment where team members take ownership, collaborate effectively, and maximize their potential.
     
@@ -173,7 +181,7 @@ def get_empower(transcript):
     """
     return get_response(prompt)
 
-def get_elevate(transcript):
+def get_elevate(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -182,6 +190,7 @@ def get_elevate(transcript):
     =======================================================
     
     Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Accelerates peak performance by setting high expectations, inspiring those around them, and enabling individuals and teams to achieve exceptional results through continuous support and constructive feedback.
     
@@ -190,7 +199,7 @@ def get_elevate(transcript):
     """
     return get_response(prompt)
 
-def get_agile_executor(transcript):
+def get_agile_executor(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -199,6 +208,7 @@ def get_agile_executor(transcript):
     =======================================================
     
     Please provide 50-100 word summary of the executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: STC's STAR Leaders deliver results by fostering accountability and tracking outcomes, adapt to change by navigating complexity with agility, and pioneer digital transformation by championing emerging technologies and innovative solutions.
     
@@ -207,7 +217,7 @@ def get_agile_executor(transcript):
     """
     return get_response(prompt)
 
-def get_deliver(transcript):
+def get_deliver(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -216,6 +226,7 @@ def get_deliver(transcript):
     =======================================================
     
     Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Creates a culture of accountability by aligning goals, clarifying key metrics, tracking outcomes, and maintaining a disciplined focus on achieving results that advance strategic priorities.
     
@@ -224,7 +235,7 @@ def get_deliver(transcript):
     """
     return get_response(prompt)
 
-def get_adapt(transcript):
+def get_adapt(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -233,6 +244,7 @@ def get_adapt(transcript):
     =======================================================
     
     Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Leads change effectively by embracing ambiguity, removing barriers to progress, and guiding teams to navigate complex challenges with agility and confidence.
     
@@ -241,7 +253,7 @@ def get_adapt(transcript):
     """
     return get_response(prompt)
 
-def get_pioneer(transcript):
+def get_pioneer(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -250,6 +262,7 @@ def get_pioneer(transcript):
     =======================================================
     
     Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Drives digital transformation and industry leadership by understanding emerging technologies, championing their implementation, and prioritizing digital solutions to sustain a strong competitive edge.
     
@@ -258,7 +271,7 @@ def get_pioneer(transcript):
     """
     return get_response(prompt)
 
-def get_resilient_steward(transcript):
+def get_resilient_steward(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -267,6 +280,7 @@ def get_resilient_steward(transcript):
     =======================================================
     
     Please provide 50-100 word summary of the executive's performance in this domain..
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: STC's STAR Leaders serve stakeholders with humility by embracing new  perspectives, inspire others with optimism and integrity, and sustaining long-term success by embodying grit and resilience.
     
@@ -275,7 +289,7 @@ def get_resilient_steward(transcript):
     """
     return get_response(prompt)
 
-def get_serve(transcript):
+def get_serve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -284,6 +298,7 @@ def get_serve(transcript):
     =======================================================
     
     Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Embodies humility by setting aside ego, staying open to diverse ideas, and remaining flexible when faced with new perspectives.
     
@@ -292,7 +307,7 @@ def get_serve(transcript):
     """
     return get_response(prompt)
 
-def get_inspire(transcript):
+def get_inspire(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -301,6 +316,7 @@ def get_inspire(transcript):
     =======================================================
     
     Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Leads with optimism and integrity by fostering trust, living STC values, demonstrating a positive outlook, and setting an example that motivates others to overcome challenges with confidence and purpose.
     
@@ -309,7 +325,7 @@ def get_inspire(transcript):
     """
     return get_response(prompt)
 
-def get_sustain(transcript):
+def get_sustain(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -318,6 +334,7 @@ def get_sustain(transcript):
     =======================================================
     
     Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Demonstrates grit and resilience by persevering through challenges, maintaining focus on long-term goals, and encouraging others to stay committed in the face of adversity.
     
@@ -327,7 +344,7 @@ def get_sustain(transcript):
     """
     return get_response(prompt)
 
-def get_innovate_strengthen(transcript):
+def get_innovate_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -336,6 +353,7 @@ def get_innovate_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.    
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Demonstrates a growth mindset and progressive long-term thinking by challenging the status quo to identify and promote innovative strategic initiatives.
     
@@ -343,7 +361,7 @@ def get_innovate_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_connect_strengthen(transcript):
+def get_connect_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -352,6 +370,7 @@ def get_connect_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Develops and maintains strong relationships with strategic stakeholders (internal and external partners / government / customers) by actively enabling collaboration across the enterprise.
     
@@ -359,7 +378,7 @@ def get_connect_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_simplify_strengthen(transcript):
+def get_simplify_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -368,6 +387,7 @@ def get_simplify_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Aligns the enterprise on highest-priority efforts that maximize stakeholder value by aggressively reducing complexity and bureaucracy.
 
@@ -375,7 +395,7 @@ def get_simplify_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_coach_strengthen(transcript):
+def get_coach_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -384,6 +404,7 @@ def get_coach_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Actively coaches and develops talent by fostering adaptability and preparing them to lead effectively in an ever-evolving environment.
 
@@ -391,7 +412,7 @@ def get_coach_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_empower_strengthen(transcript):
+def get_empower_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -400,6 +421,7 @@ def get_empower_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Builds high-performing teams by cultivating trust, delegating authority, and creating an environment where team members take ownership, collaborate effectively, and maximize their potential.
 
@@ -407,7 +429,7 @@ def get_empower_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_elevate_strengthen(transcript):
+def get_elevate_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -416,6 +438,7 @@ def get_elevate_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Accelerates peak performance by setting high expectations, inspiring those around them, and enabling individuals and teams to achieve exceptional results through continuous support and constructive feedback.
 
@@ -423,7 +446,7 @@ def get_elevate_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_deliver_strengthen(transcript):
+def get_deliver_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -432,6 +455,7 @@ def get_deliver_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Creates a culture of accountability by aligning goals, clarifying key metrics, tracking outcomes, and maintaining a disciplined focus on achieving results that advance strategic priorities.
 
@@ -439,7 +463,7 @@ def get_deliver_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_adapt_strengthen(transcript):
+def get_adapt_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -448,6 +472,7 @@ def get_adapt_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Leads change effectively by embracing ambiguity, removing barriers to progress, and guiding teams to navigate complex challenges with agility and confidence.
 
@@ -455,7 +480,7 @@ def get_adapt_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_pioneer_strengthen(transcript):
+def get_pioneer_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -464,6 +489,7 @@ def get_pioneer_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Drives digital transformation and industry leadership by understanding emerging technologies, championing their implementation, and prioritizing digital solutions to sustain a strong competitive edge.
 
@@ -471,7 +497,7 @@ def get_pioneer_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_serve_strengthen(transcript):
+def get_serve_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -480,6 +506,7 @@ def get_serve_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Embodies humility by setting aside ego, staying open to diverse ideas, and remaining flexible when faced with new perspectives.
 
@@ -487,7 +514,7 @@ def get_serve_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_inspire_strengthen(transcript):
+def get_inspire_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -496,6 +523,7 @@ def get_inspire_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Leads with optimism and integrity by fostering trust, living STC values, demonstrating a positive outlook, and setting an example that motivates others to overcome challenges with confidence and purpose.
 
@@ -503,7 +531,7 @@ def get_inspire_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_sustain_strengthen(transcript):
+def get_sustain_strengthen(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -512,6 +540,7 @@ def get_sustain_strengthen(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation about executive's strength in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Demonstrates grit and resilience by persevering through challenges, maintaining focus on long-term goals, and encouraging others to stay committed in the face of adversity.
 
@@ -519,7 +548,7 @@ def get_sustain_strengthen(transcript):
     """
     return get_response(prompt)
 
-def get_innovate_improve(transcript):
+def get_innovate_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -528,6 +557,7 @@ def get_innovate_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.  
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Demonstrates a growth mindset and progressive long-term thinking by challenging the status quo to identify and promote innovative strategic initiatives.
     
@@ -535,7 +565,7 @@ def get_innovate_improve(transcript):
     """
     return get_response(prompt)
 
-def get_connect_improve(transcript):
+def get_connect_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -544,6 +574,7 @@ def get_connect_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Develops and maintains strong relationships with strategic stakeholders (internal and external partners / government / customers) by actively enabling collaboration across the enterprise.
     
@@ -551,7 +582,7 @@ def get_connect_improve(transcript):
     """
     return get_response(prompt)
 
-def get_simplify_improve(transcript):
+def get_simplify_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -560,6 +591,7 @@ def get_simplify_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Aligns the enterprise on highest-priority efforts that maximize stakeholder value by aggressively reducing complexity and bureaucracy.
 
@@ -567,7 +599,7 @@ def get_simplify_improve(transcript):
     """
     return get_response(prompt)
 
-def get_coach_improve(transcript):
+def get_coach_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -576,6 +608,7 @@ def get_coach_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Actively coaches and develops talent by fostering adaptability and preparing them to lead effectively in an ever-evolving environment.
 
@@ -583,7 +616,7 @@ def get_coach_improve(transcript):
     """
     return get_response(prompt)
 
-def get_empower_improve(transcript):
+def get_empower_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -592,6 +625,7 @@ def get_empower_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Builds high-performing teams by cultivating trust, delegating authority, and creating an environment where team members take ownership, collaborate effectively, and maximize their potential.
 
@@ -599,7 +633,7 @@ def get_empower_improve(transcript):
     """
     return get_response(prompt)
 
-def get_elevate_improve(transcript):
+def get_elevate_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -608,6 +642,7 @@ def get_elevate_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Accelerates peak performance by setting high expectations, inspiring those around them, and enabling individuals and teams to achieve exceptional results through continuous support and constructive feedback.
 
@@ -615,7 +650,7 @@ def get_elevate_improve(transcript):
     """
     return get_response(prompt)
 
-def get_deliver_improve(transcript):
+def get_deliver_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -624,6 +659,7 @@ def get_deliver_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Creates a culture of accountability by aligning goals, clarifying key metrics, tracking outcomes, and maintaining a disciplined focus on achieving results that advance strategic priorities.
 
@@ -631,7 +667,7 @@ def get_deliver_improve(transcript):
     """
     return get_response(prompt)
 
-def get_adapt_improve(transcript):
+def get_adapt_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -640,6 +676,7 @@ def get_adapt_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Leads change effectively by embracing ambiguity, removing barriers to progress, and guiding teams to navigate complex challenges with agility and confidence.
 
@@ -647,7 +684,7 @@ def get_adapt_improve(transcript):
     """
     return get_response(prompt)
 
-def get_pioneer_improve(transcript):
+def get_pioneer_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -656,6 +693,7 @@ def get_pioneer_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Drives digital transformation and industry leadership by understanding emerging technologies, championing their implementation, and prioritizing digital solutions to sustain a strong competitive edge.
 
@@ -663,7 +701,7 @@ def get_pioneer_improve(transcript):
     """
     return get_response(prompt)
 
-def get_serve_improve(transcript):
+def get_serve_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -672,6 +710,7 @@ def get_serve_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Embodies humility by setting aside ego, staying open to diverse ideas, and remaining flexible when faced with new perspectives.
 
@@ -679,7 +718,7 @@ def get_serve_improve(transcript):
     """
     return get_response(prompt)
 
-def get_inspire_improve(transcript):
+def get_inspire_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -688,6 +727,7 @@ def get_inspire_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Leads with optimism and integrity by fostering trust, living STC values, demonstrating a positive outlook, and setting an example that motivates others to overcome challenges with confidence and purpose.
 
@@ -695,7 +735,7 @@ def get_inspire_improve(transcript):
     """
     return get_response(prompt)
 
-def get_sustain_improve(transcript):
+def get_sustain_improve(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -704,6 +744,7 @@ def get_sustain_improve(transcript):
     =======================================================
     
     Please provide one-sentence of 15-20 words recommendation to improve executive's performance in this domain.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: Demonstrates grit and resilience by persevering through challenges, maintaining focus on long-term goals, and encouraging others to stay committed in the face of adversity.
 
@@ -711,7 +752,7 @@ def get_sustain_improve(transcript):
     """
     return get_response(prompt)
 
-def get_next_steps(transcript):
+def get_next_steps(full_name, transcript):
     prompt = f"""
     Below is the interview transcript.
     
@@ -720,6 +761,7 @@ def get_next_steps(transcript):
     =======================================================
     
     Please provide 90-120 words completed next steps for the executive as below format.
+    Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}. 
     Please use real first name instead of executive.
     
     To build on the executive’s strengths and address their development areas, we recommend … [ insert recommendations ]. Key next steps include [ insert next steps ]. Additionally, [insert First Name] should set personal development goals aligned with the STC STAR competencies and regularly review progress with their manager. By taking these steps, [insert First Name] will be well-positioned to grow as a leader and make a meaningful impact on STC’s long-term success. 

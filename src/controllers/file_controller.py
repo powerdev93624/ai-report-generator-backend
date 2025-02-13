@@ -64,3 +64,24 @@ def upload_score():
 def download_file():
     file_path = 'files/result/result.docx'
     return send_file(file_path, as_attachment=True)
+
+@file.route("/", methods=["GET"])
+def delete_files():
+    current_dir = os.getcwd()
+    transcript_path = 'files/transcript/transcript.txt'
+    score_path = 'files/score/score.csv'
+    result_path = 'files/result/result.docx'
+    if os.path.exists(transcript_path):
+        os.remove(transcript_path)
+    if os.path.exists(score_path):
+        os.remove(score_path)
+    if os.path.exists(result_path):
+        os.remove(result_path)
+    return Response(
+        response=json.dumps({
+                'status': True,
+                "message": "Delete Successful"
+            }),
+        status=200,
+        mimetype='application/json'
+    )

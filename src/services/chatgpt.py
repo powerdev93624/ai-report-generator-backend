@@ -59,7 +59,8 @@ def get_strategic_partner(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 50-100 word summary of the executive's performance in this domain. 
+    Please provide one paragraph with 50-100 word summary of the executive's performance in below domain. 
+    Find the relevant content to the domain in the transcript and answer based on only that content.
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}. 
     
     Domain Definition: STC's STAR Leaders demonstrate progressive long-term thinking and a growth mindset, build strong partnerships to foster collaboration, and simplify complexity to align priorities and maximize stakeholder value.
@@ -78,10 +79,12 @@ def get_innovate(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency. 
+    Please provide one paragraph with 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency. 
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this domain, I said something like "Now let's discuss competency 1.1 innovation." 
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Demonstrates a growth mindset and progressive long-term thinking by challenging the status quo to identify and promote innovative strategic initiatives.
+    Competency Definition: Demonstrates a growth mindset and progressive long-term thinking by challenging the status quo to identify and promote innovative strategic initiatives.
     
     Sample Answer:
     Ahmed’s technical expertise allows him to identify practical solutions, such as redesigning network protocols to improve efficiency. For instance, during a critical systems review, Ahmed identified several inefficiencies in the existing network setup and proposed a phased improvement plan that immediately boosted operational speed by 20%. His methodical approach to resolving issues has been instrumental in maintaining system reliability, even in high-pressure situations. However, Ahmed tends to focus on incremental enhancements rather than challenging existing frameworks. For example, during a project to modernize IT infrastructure, he opted for minor adjustments rather than advocating for a transformative overhaul. While this ensured short-term stability, it limited the organization’s ability to fully leverage emerging technologies. Developing his ability to think beyond immediate solutions and embrace bold, strategic innovation will greatly enhance his leadership impact. Ahmed has expressed interest in exploring innovative strategies, indicating a willingness to grow in this area.
@@ -97,10 +100,12 @@ def get_connect(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this domain, I said something like "Now let's discuss competency 1.2 connect." 
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Develops and maintains strong relationships with strategic stakeholders (internal and external partners / government / customers) by actively enabling collaboration across the enterprise.
+    Competency Definition: Develops and maintains strong relationships with strategic stakeholders (internal and external partners / government / customers) by actively enabling collaboration across the enterprise.
     
     Sample Answer:
     Ahmed excels at building strong interpersonal connections, both within his team and with external vendors. For example, he successfully negotiated a cost-saving agreement with a key supplier by leveraging mutual respect and clear communication, which led to a 15% reduction in overall expenses for critical infrastructure upgrades. Ahmed's ability to communicate effectively and empathetically has earned him a reputation as a trusted collaborator, particularly when working across departments. His participation in cross-departmental committees has broadened his organizational perspective, allowing him to align IT objectives with broader corporate strategies. One notable example involved his leadership in a cross-functional task force to streamline procurement processes, where his contributions ensured smoother coordination and timely execution of projects. While Ahmed’s relational skills are strong, there is room to align these relationships more strategically with organizational goals. Developing a more proactive approach to leveraging these partnerships for long-term strategic initiatives could further amplify his impact as a leader at STC.
@@ -116,10 +121,12 @@ def get_simplify(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this domain, I said something like "Now let's discuss competency 1.3 simplify."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Aligns the enterprise on highest-priority efforts that maximize stakeholder value by aggressively reducing complexity and bureaucracy.
+    Competency Definition: Aligns the enterprise on highest-priority efforts that maximize stakeholder value by aggressively reducing complexity and bureaucracy.
     
     Sample Answer:
     Ahmed is adept at breaking down technical problems into manageable tasks, enabling his team to implement solutions efficiently. For instance, during a recent network outage, he swiftly identified the root cause and delegated responsibilities to restore operations within hours, ensuring minimal disruption to business operations. His hands-on approach to troubleshooting and clear communication kept his team focused and motivated under pressure. Ahmed’s ability to dissect complex issues is also evident in his work on upgrading IT infrastructure, where he reorganized workflows to reduce redundancies and improve system performance by 15%. 
@@ -135,7 +142,8 @@ def get_talent_enabler(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 50-100 word summary of the executive's performance in this domain.
+    Please provide one paragraph with 50-100 word summary of the executive's performance in this domain.
+    Find the relevant content to the domain in the transcript and answer based on only that content.
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: STC's STAR Leaders actively coach, develop, and engage talent, empower high-performing teams by cultivating trust and ownership, and elevate performance by inspiring excellence and enabling individuals and teams to achieve exceptional results.
@@ -153,10 +161,12 @@ def get_coach(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this domain, I said something like "Now let's discuss competency 2.1 coach."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Actively coaches and develops talent by fostering adaptability and preparing them to lead effectively in an ever-evolving environment.
+    Competency Definition: Actively coaches and develops talent by fostering adaptability and preparing them to lead effectively in an ever-evolving environment.
     
     Sample Answer:
     Ahmed has a reputation for sharing his technical expertise informally, particularly with junior colleagues. For instance, he has been instrumental in mentoring several new hires within the IT Networking Division, helping them troubleshoot complex systems and learn the nuances of network configuration. However, Ahmed has not yet established a structured coaching framework, which could amplify his impact. During a critical system migration project, Ahmed worked closely with a team member struggling to adapt to the new protocols, guiding them step-by-step to understand the requirements and succeed in their role. This experience highlighted his patience and ability to foster growth. Despite these contributions, Ahmed tends to focus on his individual responsibilities rather than adopting a proactive coaching role. Developing a consistent approach to coaching, with formal check-ins and feedback sessions, could help him nurture future leaders within the organization.
@@ -171,10 +181,12 @@ def get_empower(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 2.2 empower."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Builds high-performing teams by cultivating trust, delegating authority, and creating an environment where team members take ownership, collaborate effectively, and maximize their potential.
+    Competency Definition: Builds high-performing teams by cultivating trust, delegating authority, and creating an environment where team members take ownership, collaborate effectively, and maximize their potential.
     
     Sample Answer:
     Ahmed has demonstrated a collaborative spirit, often serving as a key team player in complex technical projects. For example, during a network optimization initiative, Ahmed delegated certain tasks to junior staff, empowering them to take ownership while providing necessary support. However, his preference for individual contribution sometimes limits his ability to fully embrace delegation and team empowerment. In another instance, Ahmed worked with a cross-functional team to streamline processes, where his ability to create a trusting and inclusive environment ensured the project stayed on track. Despite these successes, Ahmed occasionally hesitates to entrust critical responsibilities to others, which can slow team growth and innovation. By learning to delegate more effectively and cultivating ownership among team members, Ahmed can unlock higher levels of team performance and expand his leadership capacity.
@@ -189,10 +201,12 @@ def get_elevate(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 2.3 elevate."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Accelerates peak performance by setting high expectations, inspiring those around them, and enabling individuals and teams to achieve exceptional results through continuous support and constructive feedback.
+    Competency Definition: Accelerates peak performance by setting high expectations, inspiring those around them, and enabling individuals and teams to achieve exceptional results through continuous support and constructive feedback.
     
     Sample Answer:
     Ahmed consistently strives for excellence in his work, setting a high standard for quality and attention to detail. For instance, during a company-wide system upgrade, his thorough planning and execution inspired the team to meet tight deadlines without compromising quality. While Ahmed provides constructive feedback in informal settings, he has not yet established a structured approach to performance reviews. During a particularly challenging project, Ahmed’s encouragement and troubleshooting support motivated a team member to overcome significant obstacles and deliver results exceeding expectations. Despite these strengths, Ahmed could enhance his leadership by setting clearer performance expectations and offering more frequent, structured feedback sessions. By doing so, he can foster a culture of continuous improvement and inspire his team to achieve even greater success.
@@ -207,7 +221,8 @@ def get_agile_executor(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 50-100 word summary of the executive's performance in this domain.
+    Please provide one paragraph with 50-100 word summary of the executive's performance in this domain.
+    Find the relevant content to the domain in the transcript and answer based on only that content.
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: STC's STAR Leaders deliver results by fostering accountability and tracking outcomes, adapt to change by navigating complexity with agility, and pioneer digital transformation by championing emerging technologies and innovative solutions.
@@ -225,10 +240,12 @@ def get_deliver(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 3.1 deliver."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Creates a culture of accountability by aligning goals, clarifying key metrics, tracking outcomes, and maintaining a disciplined focus on achieving results that advance strategic priorities.
+    Competency Definition: Creates a culture of accountability by aligning goals, clarifying key metrics, tracking outcomes, and maintaining a disciplined focus on achieving results that advance strategic priorities.
     
     Sample Answer:
     Ahmed has a strong track record of delivering results, particularly in high-pressure situations. For example, during a mission-critical server migration, Ahmed meticulously aligned his team’s efforts with project milestones, ensuring that key deliverables were met on time. He is highly disciplined in tracking outcomes and maintaining focus, which has earned him the trust of his managers and peers. However, Ahmed’s approach tends to focus on technical execution rather than strategic alignment. During a recent initiative to improve network security, he successfully met the technical goals but could have engaged more with stakeholders to align the project outcomes with broader organizational priorities. By developing his ability to connect individual project goals with the company’s strategic vision, Ahmed can further enhance his effectiveness as a results-driven leader.
@@ -243,10 +260,12 @@ def get_adapt(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 3.2 Adapt."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Leads change effectively by embracing ambiguity, removing barriers to progress, and guiding teams to navigate complex challenges with agility and confidence.
+    Competency Definition: Leads change effectively by embracing ambiguity, removing barriers to progress, and guiding teams to navigate complex challenges with agility and confidence.
     
     Sample Answer:
     Ahmed demonstrates a natural ability to remain composed and resourceful in the face of ambiguity. During a major system transition involving unforeseen technical issues, Ahmed quickly assessed the situation and rallied his team to troubleshoot effectively, ensuring minimal disruption to operations. His proactive problem-solving approach allowed him to address uncertainties while keeping his team focused. In another example, Ahmed played a key role in a project involving shifting organizational priorities, where his ability to adapt to new directives without losing momentum was critical to the project’s success. However, Ahmed’s focus on immediate solutions occasionally limits his ability to address larger, systemic challenges. By building on his adaptability and honing his skills in removing barriers to progress, Ahmed can further strengthen his leadership capacity in driving change.
@@ -261,10 +280,12 @@ def get_pioneer(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 3.3 pioneer."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Drives digital transformation and industry leadership by understanding emerging technologies, championing their implementation, and prioritizing digital solutions to sustain a strong competitive edge.
+    Competency Definition: Drives digital transformation and industry leadership by understanding emerging technologies, championing their implementation, and prioritizing digital solutions to sustain a strong competitive edge.
     
     Sample Answer:
     Ahmed has consistently demonstrated a keen interest in leveraging emerging technologies to enhance organizational performance. For instance, he spearheaded the adoption of advanced network analytics tools that significantly improved system efficiency and reliability. His ability to stay updated on technological trends enables him to identify and advocate for tools that align with STC’s strategic goals. Additionally, Ahmed has contributed to workshops aimed at fostering innovation within his team, encouraging them to explore digital solutions for longstanding challenges. However, while Ahmed excels in identifying and implementing technical solutions, he could improve in championing digital transformation on a broader organizational scale. By developing a more strategic focus on integrating these technologies into STC’s long-term vision, Ahmed can elevate his impact as a pioneer in the digital domain.
@@ -279,7 +300,8 @@ def get_resilient_steward(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 50-100 word summary of the executive's performance in this domain..
+    Please provide one paragraph with 50-100 word summary of the executive's performance in this domain.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
     Domain Definition: STC's STAR Leaders serve stakeholders with humility by embracing new  perspectives, inspire others with optimism and integrity, and sustaining long-term success by embodying grit and resilience.
@@ -297,10 +319,12 @@ def get_serve(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 4.1 serve."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Embodies humility by setting aside ego, staying open to diverse ideas, and remaining flexible when faced with new perspectives.
+    Competency Definition: Embodies humility by setting aside ego, staying open to diverse ideas, and remaining flexible when faced with new perspectives.
     
     Sample Answer:
     Ahmed collaborates effectively across teams and demonstrates a consistent openness to diverse perspectives. For instance, during a cross-departmental initiative to redesign IT workflows, Ahmed actively sought input from colleagues outside of his technical expertise, incorporating their feedback into the final solution. This approach not only strengthened the project outcomes but also earned him respect for his humility and willingness to listen. In another instance, Ahmed’s adaptability was tested when faced with conflicting stakeholder priorities during a critical system upgrade. By setting aside personal preferences and focusing on collaborative solutions, he ensured the project’s success while maintaining team harmony. However, Ahmed could further develop his ability to take initiative in proposing solutions. Encouraging him to lead discussions and actively challenge the status quo will enhance his contributions and allow him to make a broader impact as a leader at STC.
@@ -315,10 +339,12 @@ def get_inspire(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200 word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 4.2 inspire."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Leads with optimism and integrity by fostering trust, living STC values, demonstrating a positive outlook, and setting an example that motivates others to overcome challenges with confidence and purpose.
+    Competency Definition: Leads with optimism and integrity by fostering trust, living STC values, demonstrating a positive outlook, and setting an example that motivates others to overcome challenges with confidence and purpose.
     
     Sample Answer:
     Ahmed’s calm demeanor and integrity have consistently fostered trust among his colleagues. For example, during a high-pressure IT infrastructure upgrade, Ahmed remained composed, rallying his team to troubleshoot issues collaboratively. In one instance, when a critical system failure threatened to delay operations, Ahmed's level-headedness not only restored order but also motivated his team to push through a challenging night shift. Additionally, Ahmed’s transparency and ethical decision-making have earned him respect across departments. His regular efforts to communicate honestly about challenges and decisions create an environment of trust, ensuring stakeholders are aligned and confident in his leadership. However, Ahmed often focuses on task execution over actively inspiring his team. For example, while his technical proficiency is appreciated, he has yet to develop a compelling vision that galvanizes his team beyond immediate goals. This tendency could limit his influence as he steps into roles requiring broader leadership and inspiration.
@@ -333,10 +359,12 @@ def get_sustain(full_name, transcript):
     {transcript}
     =======================================================
     
-    Please provide 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Please provide one paragraph with 150-200-word detailed narrative summarizing the executive's behaviors and experiences related to this competency.
+    Find the relevant content to the competency in the transcript and answer based on only that content.
+    Before I started discussing this competency, I said something like "Now let's discuss competency 4.3 sustain."
     Please don't use the individual's name mentioned in the transcript. Please replace the individual's name with {full_name}.
     
-    Domain Definition: Demonstrates grit and resilience by persevering through challenges, maintaining focus on long-term goals, and encouraging others to stay committed in the face of adversity.
+    Competency Definition: Demonstrates grit and resilience by persevering through challenges, maintaining focus on long-term goals, and encouraging others to stay committed in the face of adversity.
     
     Sample Answer:
     Ahmed’s resilience has been a hallmark of his career, particularly during high-pressure situations. For example, during a prolonged system outage that required multiple overnight shifts, Ahmed maintained his focus and encouraged his team to persevere until the issue was resolved. His determination and calm leadership kept morale high, even under challenging circumstances. Additionally, Ahmed’s commitment to long-term goals is evident in his role as a key contributor to the rollout of a multi-year IT modernization plan, where he consistently met deadlines and ensured project milestones were achieved. Despite his strengths, Ahmed could further enhance his leadership by encouraging his team to adopt a similarly resilient mindset, particularly when faced with setbacks. By sharing his strategies for overcoming challenges and fostering a culture of perseverance, Ahmed can inspire his colleagues to achieve even greater results.

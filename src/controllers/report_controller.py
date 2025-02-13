@@ -8,6 +8,7 @@ import os
 import uuid
 from src.services.functions import *
 import pythoncom
+import pandas as pd
 
 
 
@@ -15,14 +16,16 @@ import pythoncom
 # user controller blueprint to be registered with api blueprint
 report = Blueprint("report", __name__)
 original_doc_path = "src/files/sample/sample.docx"
-output_doc_path = "src/files/result/result.docx"
+output_doc_path = "src/files/report/report.docx"
 @report.route('/generate', methods = ["POST"])
 def generate():
     pythoncom.CoInitializeEx(0)
     scores = pd.read_csv("src/files/score/score.csv")
+    result_path = "src/files/result/result.csv"
+    result_df = pd.read_csv(result_path)
     doc = Document(original_doc_path)
     paragraphs = doc.paragraphs
-    try: 
+    try:
         data = request.json
         full_name = data["firstName"]+" "+ data["lastName"]
         with open('src/files/transcript/transcript.txt', 'r') as file:
@@ -71,6 +74,22 @@ def generate():
         print(21)
         doc.save(output_doc_path)
         fill_score(scores, output_doc_path)
+        
+        current_date = datetime.now().strftime('%Y-%m-%d')
+        new_row = {
+            'id': len(result_df), "Full Name": full_name, "Date": current_date
+        }
+        for col in result_df.columns:
+            if col == "id":
+                new_row["id"] = len(result_df)
+            elif col == "Full Name":
+                new_row["Full Name"] = full_name
+            elif col == "Date":
+                new_row["Date"] = current_date
+            else:
+                new_row[col] = str(scores.loc[scores['id'] == col, 'score'].values[0])
+        result_df.loc[len(result_df)] = new_row
+        result_df.to_csv(result_path, index=None)
         return Response(
             response=json.dumps({
                 'status': True,
